@@ -203,7 +203,7 @@
                                         throw new RuntimeException('Bad login or email');
                                     }
                                 },
-                                0
+                                0 //priority
                             );
                             ```
                             ```php
@@ -212,7 +212,7 @@
                                 function(User &$user) {
                                     Mail::send($user->email, "Welcome", "Glad you joined us");
                                 },
-                                0
+                                0 //priority
                             );
                             ```
                         </script>
@@ -230,7 +230,7 @@
                                         throw new RuntimeException('Password is not complex enough');
                                     }
                                 },
-                                10 //avant
+                                10 //greater priority
                             );
                             ```
                         </script>
@@ -250,7 +250,7 @@
                                 function(User &$user) {
                                     $user->created_at = new DateTime();
                                 },
-                                -10 //après
+                                -10 //lower priority
                             );
                             ```
                         </script>
@@ -272,7 +272,7 @@
                                         return false; // stop propagation
                                     }
                                 },
-                                10 //avant
+                                10 //greater priority
                             );
                             ```
                         </script>
@@ -307,8 +307,8 @@
                     <h1>thank you</h1>
                     <p><small>by Etienne Roudeix / <a href="http://twitter.com/__etienne">@__etienne</a></small></p>
                     <p>
-                        <a href="https://github.com/etienneroudeix/talks-eventProgramming" target="_blank">
-                            https://github.com/etienneroudeix/talks-eventProgramming
+                        <a href="http://github.roudeix.net/talks-eventProgramming" target="_blank">
+                            http://github.roudeix.net/talks-eventProgramming
                         </a>
                     </p>
                 </section>

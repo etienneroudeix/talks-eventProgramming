@@ -95,7 +95,7 @@
                                     'email' => $email,
                                 ]);
 
-                                Mail::send($email, "Welcome", "Glad you joined us"); //envoi d'un mail
+                                Mail::send($email, "Welcome", "Glad you joined us"); //send email
 
                                 return $user;
                             }
@@ -242,7 +242,7 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ##OOP sample
+                            ##EVENT PROGRAMMING WAY
                             #####adding a ```created_at``` field to my user
                             ```php
                             Event::listen(
@@ -262,7 +262,7 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ##OOP sample
+                            ##EVENT PROGRAMMING WAY
                             #####sending the e-mail under conditions ?
                             ```php
                             Event::listen(
